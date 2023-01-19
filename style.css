@@ -1,0 +1,299 @@
+/* 기본스타일 */
+* {box-sizing: border-box;
+    -webkit-box-sizing:  border-box;
+    -moz-box-sizing:  border-box;
+     box-sizing:  border-box;
+}
+/* 벤더프리픽스 적용 */
+img {max-width: 100%; height: auto;
+  vertical-align: bottom;
+}
+.mysvg { width: 30%;}
+a {text-decoration: none;}
+body {
+    -webkit-display: flex;
+-moz-display: flex;
+-ms-display: flex;
+-o-display: flex;
+display: flex;
+
+-webkit-flex-direction: column;
+-moz-flex-direction: column;
+-ms-flex-direction:column;
+-o-flex-direction: column;
+flex-direction: column;
+    
+  
+ 
+  min-height: 100vh;
+  font-family: 'lato', sans-serif;
+  color: #3a3a3a;
+}
+
+
+
+.container {width: 90%;
+  /* border:  1px solid red; */
+  margin: 0 auto;
+  max-width: 1170px;  
+}
+.button {height: 50px;
+ border-radius: 3px;
+ letter-spacing: 1px;
+ background: none;  
+}
+
+/* header 부분 */
+#main-header {
+    /* border: 1px solid blue; */
+    background-color: #fff;
+    padding: 0.85em 0;
+}
+#main-header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#main-header .logo,
+    #main-header nav a {
+        padding: 10px;
+    }
+
+#main-header .logo {
+    font-size: 1.35em;
+    color: #28415E;
+}
+#main-header nav a {
+    font-size: 0.65em;
+    text-transform: uppercase;
+    color: #517fb5;
+}
+
+
+
+/* intro */
+#intro {
+    background: #eeebe4;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 0;
+}
+#intro .cta {
+    /* border : 2px dotted orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #28415E;
+}
+#intro .cta .splash {
+    display: none;
+}
+
+#intro .cat img {
+
+}
+#intro .cta h1,
+#intro .cta p,
+#intro .cta .button {
+    text-align: center;
+}
+#intro .cta p {margin-bottom: 1.5em;}
+#intro .cta .button {
+    color: #28415E;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: inset 0 0 0 2px #b79d55;
+}
+#intro .cta .button:hover,
+#intro .cta .button:focus {
+ background: #b79d55;
+ color: #fff;
+}
+
+/* Tour */
+
+#tours {
+    /* border: 2px dashed purple; */
+    padding-top: 4em;
+}
+#tours h2 {margin: 0;
+      text-align: center;}
+#tours form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 4em 0;
+    max-width: 600px;
+    flex-wrap: wrap;
+}
+#tours form input,
+#tours form button {
+    margin: 0 1em;
+    padding: 10px;
+    height: 50px;
+    outline: none;
+}
+#tours form input {
+    background-color: #fff;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #494f4f;
+    transition: all 0.4s;
+}
+#tours form input:focus{
+    border-color: #879090;
+}
+#tours form .button{
+    border: 0;
+    box-shadow: inset 0 0 0 2px #879090;
+    color: #494f4f;
+}
+#tours form .button:hover,
+#tours form .button:focus {
+    background-color: #879090;
+    color: #fff;
+}
+
+#tours ul,
+#tours ul li,
+#tours ul li div {
+ display: flex;
+}
+
+#tours ul {
+    flex-wrap: wrap;
+    margin: 0; padding: 0;
+    list-style: none;
+}
+
+#tours ul li {
+    background-color: rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    position: relative;
+    flex-direction: column;
+    transition: background 0.4s;
+}
+
+#tours ul li img {z-index: -1;}
+
+#tours ul li div {
+    position: absolute;
+    width: 100%; height: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#tours ul li:hover {
+    background-color: transparent;
+}
+#tours ul li div h3,
+#tours ul li div h4 {margin: 0;}
+
+#tours ul li div h3 {
+    margin-bottom: 0.35em;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+#tours ul li div h4 {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* pricing */
+#pricing {display: flex;
+   flex-direction: column;
+   padding: 4em 0;
+}
+
+#pricing article {
+    /* border: 4px dotted orange; */
+    background-color: #edf4f7;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 0.85em 1em;
+    border-radius: 3px;
+}
+#pricing article:last-child{
+    margin-bottom: 0;
+}
+#pricing article h3 {
+    color: #28415e;
+}
+#pricing article p {
+    margin: 0 0 1em;
+    font-size: 0.95em;
+    line-height: 24px;
+    font-weight: 400;
+}
+#pricing article p:last-of-type{
+    margin-bottom: 3em;
+}
+
+#pricing article .button {
+    padding: 10px 30px;
+    margin-top: auto;
+    box-shadow: inset 0 0 0 2px #375a82;
+    color: #28416e;
+    display: flex;
+    align-items: center;
+}
+#pricing article .button:hover,
+#pricing article .button:focus {
+    background-color: #375a82;
+    color: #fff;
+}
+
+#main-footer {
+    background-color: #d0e4ea;
+    flex: 1; padding: 2em 0;
+    text-align: center;
+}
+
+@media (min-width:600px) {
+    #main-header .logo,
+    #main-header nav a {
+        padding: 10px 15px;
+    }
+    #main-header nav a {
+        font-size: 0.95em;
+    }
+    #intro .cta .splash {
+        display: block;
+        width: 200px;
+    }
+
+    #tours form {
+        flex-direction: row;
+    }
+
+    #tours form input{
+        flex: 3;
+        margin-bottom: 0;
+    }
+
+    #tours form .button {
+        flex: 100px;
+    }
+    #tours ul li { flex: 50%;}
+    
+}
+
+@media (min-width:800px){
+    #tours ul li {flex: 25%;}
+    #pricing {flex-direction: row;}
+    #pricing article{ margin-bottom: 0;}
+}
+
